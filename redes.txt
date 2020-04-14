@@ -1,0 +1,13 @@
+enable
+configure terminal
+enable secret umg 2018
+exit x2
+
+configure terminal
+line console 0
+password universidad
+login
+
+banner motd #bienvenidos#
+enable
+show running-config
