@@ -1,0 +1,20 @@
+<% 
+   InetAddress ip=null;
+   String eldns = "hay error", elhostname="hay error",error="No hay error";
+   try{
+   InetAddress laip= ip.getByName(request.getRemoteAddr());
+   eldns = laip.getCanonicalHostName();
+   elhostname = laip.getHostName();
+   }
+   catch(Exception e){error=e.getMessage();}
+   
+   
+
+%> 
+<p style="margin-top: 0; margin-bottom: 0"><font color="#FFFFFF"><span style="background-color: #800080">   
+    
+<b><%=request.getRemoteAddr()%></b>
+<br>tudns=<%=eldns%>
+<br>tu hostname=<%=elhostname%>
+<br>error=<%=error%>
+</span></font></p>
